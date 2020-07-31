@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd actions
+cd action
 ls -l
 sh -c "python 123.py"
 
