@@ -1,4 +1,3 @@
-#!/bin/sh -l
+#!/bin/bash
 
-sh -c "python"
-sh -c "3 + 6"
+sh -c "python 123.py"
