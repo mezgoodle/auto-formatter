@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM python:3
 MAINTAINER Mezgoodle <Mezgoodle@gmail.com>
 
 ADD 123.py /123.py
