@@ -7,4 +7,4 @@ ADD 123.py /123.py
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["apt-get install -y tree"]
+RUN apt-get install -y tree
