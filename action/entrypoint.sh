@@ -1,8 +1,9 @@
 #!/bin/bash
 
-cd app
+cd action
 #ls -l
 #sh -c "python 123.py"
 
-tree -L 1
+whereis tree
+#tree -L 1
 #echo "Hello Max"
