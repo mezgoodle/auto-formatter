@@ -5,6 +5,7 @@
 
 #whereis tree
 tree -L 1
+pip install sync-folders
 pip freeze > requirements.txt
 tree -L 1
 cat requirements.txt
