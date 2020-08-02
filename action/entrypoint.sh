@@ -5,7 +5,7 @@
 
 #whereis tree
 tree -L 1
-pip install sync-folders
+pip install sync-folders flask
 pip freeze > requirements.txt
 tree -L 1
 cat requirements.txt
