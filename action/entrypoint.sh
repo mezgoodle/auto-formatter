@@ -7,4 +7,5 @@
 tree -L 1
 pip freeze > requirements.txt
 tree -L 1
+cat requirements.txt
 #echo "Hello Max"

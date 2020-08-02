@@ -1,2 +1,2 @@
 # auto-formatter
- GitHub app that formats my commits automatically
+ GitHub action that formats my commits automatically
