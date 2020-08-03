@@ -10,4 +10,4 @@ COPY python.sh /python.sh
 COPY node.sh /node.sh
 RUN chmod +x /python.sh
 RUN chmod +x /node.sh
-ENTRYPOINT ["/python.sh", "/node.sh"]
+RUN ["/python.sh", "/node.sh"]
