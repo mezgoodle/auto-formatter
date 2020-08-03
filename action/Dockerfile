@@ -1,4 +1,4 @@
-FROM python3.8-nodejs14-alpine
+FROM python:3.8-nodejs:14
 MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
 #WORKDIR /app
