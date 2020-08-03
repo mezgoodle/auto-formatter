@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y apt-transport-https
 RUN apt-get install -y tree
 
 COPY 123.py /123.py
-COPY entrypoint.sh /entrypoint.sh
+COPY python.sh /python.sh
+COPY node.sh /node.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ['/python.sh', '/node.sh']
