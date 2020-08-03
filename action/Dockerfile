@@ -8,10 +8,6 @@ RUN apt-get install -y tree
 # COPY 123.py /123.py
 COPY python.sh /python.sh
 COPY node.sh /node.sh
-COPY git.sh /git.sh
-RUN chmod +x /python.sh
-RUN chmod +x /node.sh
-RUN chmod +x /git.sh
-RUN "/python.sh"
-RUN "/node.sh"
-RUN "/git.sh"
+COPY gitstart.sh /gitstart.sh
+RUN chmod +x /python.sh && chmod +x /node.sh && chmod +x /gitstart.sh
+RUN "/python.sh" && "/node.sh" && "/gitstart.sh"
