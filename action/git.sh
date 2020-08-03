@@ -5,4 +5,4 @@ echo "---"
 
 echo "Type git checkout"
 git checkout
-echo "End of node.sh"
+echo "End of git.sh"
