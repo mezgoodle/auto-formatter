@@ -8,4 +8,4 @@ RUN apt-get install -y tree
 COPY 123.py /123.py
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ['/python.sh', '/node.sh']
