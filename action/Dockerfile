@@ -1,4 +1,5 @@
 FROM python:3
+FROM node:14.7.0
 MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
 #WORKDIR /app
