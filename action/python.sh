@@ -20,6 +20,7 @@ echo "Output to requirements.txt"
 echo "----"
 cat requirements.txt
 echo "Output 123.py"
+echo "----"
 cat 123.py
 echo "End of python.sh"
 #echo "Hello Max"
