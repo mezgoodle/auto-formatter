@@ -1,4 +1,4 @@
-FROM python-nodejs
+FROM nikolaik/python-nodejs:latest
 MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
 #WORKDIR /app
