@@ -2,6 +2,6 @@
 
 echo "Start gitstart.sh"
 echo "---"
-echo "Type git checkout"
-git checkout
+echo "Type git status"
+git status
 echo "End of gitstart.sh"
