@@ -11,7 +11,7 @@ COPY node.sh /node.sh
 COPY git.sh /git.sh
 RUN chmod +x /python.sh
 RUN chmod +x /node.sh
-RUN git.sh /git.sh
+RUN chmod +x /git.sh
 RUN "/python.sh"
 RUN "/node.sh"
 RUN "/git.sh"
