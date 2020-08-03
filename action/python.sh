@@ -19,5 +19,5 @@ tree -L 1
 echo "Output requirements.txt"
 echo "----"
 cat requirements.txt
-echo "End of node.sh"
+echo "End of python.sh"
 #echo "Hello Max"
