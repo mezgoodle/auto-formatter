@@ -6,7 +6,7 @@ COPY gitstart.sh /gitstart.sh
 
 # Install some packages
 RUN apk add jq bash git npm yarn
-RUN echo "dads"
+RUN chmod +x gitstart.sh
 
 # Start action
 ENTRYPOINT ["/gitstart.sh"]
