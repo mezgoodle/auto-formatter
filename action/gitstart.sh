@@ -9,4 +9,7 @@ cd sync-folders
 echo "Execute cat LICENSE"
 echo "---"
 cat LICENSE
+echo "Execute git status"
+echo "---"
+git status
 echo "End of gitstart.sh"
