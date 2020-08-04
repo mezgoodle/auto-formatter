@@ -1,13 +1,12 @@
-FROM nikolaik/python-nodejs:latest
-MAINTAINER mezgoodle <mezgoodle@gmail.com>
+# Use latest alpine image as base
+FROM alpine:latest
 
-#WORKDIR /app
-RUN apt-get update && apt-get install -y apt-transport-https
-RUN apt-get install -y tree
-
-COPY 123.py /123.py
-COPY python.sh /python.sh
-COPY node.sh /node.sh
+# Copy needed stuff into container
+COPY LICENSE README.md /
 COPY gitstart.sh /gitstart.sh
-RUN chmod +x /python.sh && chmod +x /node.sh && chmod +x /gitstart.sh
-RUN "/python.sh" && "/node.sh" && "/gitstart.sh"
+
+# Install some packages
+RUN apk add jq bash git npm yarn
+
+# Start action
+ENTRYPOINT ["/gitstart.sh"]
