@@ -2,7 +2,6 @@
 FROM alpine:latest
 
 # Copy needed stuff into container
-COPY LICENSE README.md /
 COPY gitstart.sh /gitstart.sh
 
 # Install some packages
