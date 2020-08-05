@@ -32,5 +32,8 @@ echo "---"
 echo "## Execute git branch"
 echo "---"
 git branch
+echo "Push to master"
+echo "---"
+git remote add origin https://x-access-token:$TOKEN@github.com/SQL.git
 git push -u origin master
 echo "End of gitstart.sh"
