@@ -6,9 +6,9 @@ echo "Execute git clone"
 echo "---"
 git clone https://github.com/mezgoodle/SQL.git
 cd SQL
-echo "Execute cat LICENSE"
+echo "Execute cat index.sql"
 echo "---"
-cat LICENSE
+cat index.sql
 echo "Execute git status"
 echo "---"
 git status
