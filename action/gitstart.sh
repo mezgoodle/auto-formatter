@@ -29,5 +29,8 @@ echo "---"
 git commit -m "Formatted code" || true
 echo "## Pushing to master"
 echo "---"
+echo "## Execute git branch"
+echo "---"
+git branch
 git push -u origin master
 echo "End of gitstart.sh"
