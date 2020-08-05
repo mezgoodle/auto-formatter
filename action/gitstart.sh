@@ -14,5 +14,6 @@ echo "---"
 git status
 echo "Echo repo full name"
 echo "---"
+REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
 echo $REPO_FULLNAME
 echo "End of gitstart.sh"
