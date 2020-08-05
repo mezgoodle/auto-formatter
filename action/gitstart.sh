@@ -21,6 +21,15 @@ BRANCH=${GITHUB_REF#*refs/heads/}
 echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
 echo "---"
 git checkout $BRANCH
+echo "## Staging changes..."
+echo "---"
+git add .
+echo "## Commiting files..."
+echo "---"
+git commit -m "Formatted code" || true
+echo "## Pushing to $BRANCH"
+echo "---"
+git push -u origin $BRANCH
 echo "Echo repo full name"
 echo "---"
 REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
