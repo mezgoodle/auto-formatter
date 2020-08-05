@@ -2,16 +2,16 @@
 
 echo "Start gitstart.sh"
 echo "---"
-echo "Echo repo full name"
-echo "---"
-REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
-echo $REPO_FULLNAME
+# echo "Echo repo full name"
+# echo "---"
+# REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
+# echo $REPO_FULLNAME
 echo "## Initializing git repo..."
 echo "---"
 git init
 echo "### Adding git remote..."
 echo "---"
-git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
+git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/SQL.git
 echo "### Getting branch"
 echo "---"
 BRANCH=${GITHUB_REF#*refs/heads/}
@@ -34,12 +34,6 @@ echo "hello" > test.txt
 echo "Execute git status"
 echo "---"
 git status
-echo "### Getting branch"
-echo "---"
-BRANCH=${GITHUB_REF#*refs/heads/}
-echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
-echo "---"
-git checkout $BRANCH
 echo "## Login into git..."
 echo "---"
 git config --global user.email "mezgoodle@gmail.com"
