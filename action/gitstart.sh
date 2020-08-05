@@ -21,6 +21,10 @@ BRANCH=${GITHUB_REF#*refs/heads/}
 echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
 echo "---"
 git checkout $BRANCH
+echo "## Login into git..."
+echo "---"
+git config --global user.email "mezgoodle@gmail.com"
+git config --global user.name "auto-formatter"
 echo "## Staging changes..."
 echo "---"
 git add .
