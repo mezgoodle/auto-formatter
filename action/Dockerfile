@@ -12,3 +12,4 @@ MAINTAINER mezgoodle <mezgoodle@gmail.com>
 #COPY gitstart.sh /gitstart.sh
 #RUN chmod +x /python.sh && chmod +x /node.sh && chmod +x /gitstart.sh
 #RUN "/python.sh" && "/node.sh" && "/gitstart.sh"
+RUN "/python.sh"
