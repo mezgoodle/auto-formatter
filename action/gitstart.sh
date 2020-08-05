@@ -9,6 +9,9 @@ cd SQL
 echo "Execute cat index.sql"
 echo "---"
 cat index.sql
+echo "Create new file"
+echo "---"
+echo "hello" > test.txt
 echo "Execute git status"
 echo "---"
 git status
