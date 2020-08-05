@@ -15,6 +15,12 @@ echo "hello" > test.txt
 echo "Execute git status"
 echo "---"
 git status
+echo "### Getting branch"
+echo "---"
+BRANCH=${GITHUB_REF#*refs/heads/}
+echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
+echo "---"
+git checkout $BRANCH
 echo "Echo repo full name"
 echo "---"
 REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
