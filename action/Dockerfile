@@ -5,5 +5,6 @@ FROM nyukers/sunhose:aformat
 
 MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
+WORKDIR /app
+RUN tree -L 1
 RUN echo "Hello world" && echo $PATH
-#RUN tree -L 1
