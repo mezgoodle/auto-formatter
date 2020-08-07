@@ -1,10 +1,9 @@
 #FROM nikolaik/python-nodejs:latest
 #FROM nyukers/sunhose:mezgoodle
 #FROM alpine:latest
-FROM nyukers/sunhose:aformat
-
+#FROM nyukers/sunhose:aformat
+#FROM nikolaik/python-nodejs:latest
+FROM nyukers/sunhose:mezgoodle
 MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
-WORKDIR /app
-RUN tree -L 1
-RUN echo "Hello world" && echo $PATH
+RUN "/python.sh"
