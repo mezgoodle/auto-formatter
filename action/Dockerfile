@@ -1,5 +1,4 @@
-#FROM nikolaik/python-nodejs:latest
-FROM python:3.8-slim-buster
+FROM nikolaik/python-nodejs:latest
 #FROM nyukers/sunhose:mezgoodle
 
 MAINTAINER mezgoodle <mezgoodle@gmail.com>
@@ -13,5 +12,5 @@ COPY python.sh /python.sh
 COPY node.sh /node.sh
 COPY gitstart.sh /gitstart.sh
 RUN chmod +x /python.sh && chmod +x /node.sh && chmod +x /gitstart.sh
-RUN "/python.sh" && "/node.sh" && "/gitstart.sh"
-#RUN "/python.sh"
+#RUN "/python.sh" && "/node.sh" && "/gitstart.sh"
+RUN "/python.sh"
