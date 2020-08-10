@@ -1,15 +1,12 @@
 #FROM nikolaik/python-nodejs:latest
-FROM nyukers/sunhose:mezgoodle
+#FROM nyukers/sunhose:mezgoodle
+#FROM alpine:latest
+FROM nyukers/sunhose:aformat
 MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
-#WORKDIR /app
-#RUN apt-get update && apt-get install -y apt-transport-https
-#RUN apt-get install -y tree
+# WORKDIR /app
 
-#COPY 123.py /123.py
-#COPY python.sh /python.sh
-#COPY node.sh /node.sh
-#COPY gitstart.sh /gitstart.sh
-#RUN chmod +x /python.sh && chmod +x /node.sh && chmod +x /gitstart.sh
-#RUN "/python.sh" && "/node.sh" && "/gitstart.sh"
-RUN "/python.sh"
+RUN tree -L 1
+RUN echo "Hello world"
+ENTRYPOINT ["/bin/echo"]
+#CMD ["Hello"]
