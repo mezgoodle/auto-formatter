@@ -7,6 +7,6 @@ MAINTAINER mezgoodle <mezgoodle@gmail.com>
 # WORKDIR /app
 
 RUN tree -L 1
-RUN echo "Hello world" && echo $PATH
+RUN echo "Hello world"
 ENTRYPOINT ["/bin/echo"]
 #CMD ["Hello"]
