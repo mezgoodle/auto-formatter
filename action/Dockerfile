@@ -11,8 +11,8 @@ ENTRYPOINT ["/bin/echo"]
 RUN apk add jq bash git npm yarn
 
 RUN chmod +x /gitstart.sh
-RUN "/gitstart.sh"
+# RUN "/gitstart.sh"
 
 # RUN tree -L 1
 RUN echo "Hello world"
-#CMD ["Hello"]
+CMD ["/gitstart.sh"]
