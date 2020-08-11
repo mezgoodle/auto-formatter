@@ -1,0 +1,2 @@
+/gitstart.sh
+/test.sh
