@@ -2,11 +2,18 @@ name: "Hello Actions"
 description: "Greet someone"
 author: "mezgoodle"
 
+inputs:
+  MY_NAME:
+    description: "Who to greet"
+    required: true
+    default: "World"
+
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.GITHUB_TOKEN }}
+      - ${{ inputs.myInput }}
+
 
 branding:
   icon: "mic"
