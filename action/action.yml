@@ -3,10 +3,10 @@ description: "Greet someone"
 author: "mezgoodle"
 
 inputs:
-  MY_NAME:
-    description: "Who to greet"
+  GITHUB_TOKEN:
+    description: "GitHub token for work"
     required: true
-    default: "World"
+    default: ""
 
 runs:
   using: "docker"
