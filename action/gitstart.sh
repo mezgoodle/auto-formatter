@@ -2,38 +2,19 @@
 
 set -e
 
-echo "Start gitstart.sh"
-echo "---"
-echo "Execute git clone"
-echo "---"
-git clone https://github.com/mezgoodle/SQL.git
-cd SQL
-echo "Execute cat index.sql"
-echo "---"
-cat index.sql
-echo "Create new file"
-echo "---"
-echo "hello" > test.txt
-echo "Execute git status"
-echo "---"
-git status
+REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
+
+echo "## Initializing git repo..."
+git init
+echo "### Adding git remote..."
+git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
+echo "### Getting branch"
+BRANCH=${GITHUB_REF#*refs/heads/}
+echo "### git fetch $BRANCH ..."
+git fetch origin $BRANCH
+echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
+git checkout $BRANCH
+
 echo "## Login into git..."
-echo "---"
-git config --global user.email "mezgoodle@gmail.com"
-git config --global user.name "auto-formatter"
-echo "## Staging changes..."
-echo "---"
-git add .
-echo "## Commiting files..."
-echo "---"
-git commit -m "Formatted code" || true
-echo "## Pushing to master"
-echo "---"
-echo "## Execute git branch"
-echo "---"
-git branch
-echo "Push to master"
-echo "---"
-git remote add formatter https://x-access-token:9ab09f5d4f068fcb6787256915f9f89b2eb66f31@github.com/mezgoodle/SQL.git
-git push formatter master
-echo "End of gitstart.sh"
+git config --global user.email "formatter@1337z.ninja"
+git config --global user.name "Node Code Formatter"
