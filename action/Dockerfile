@@ -6,6 +6,7 @@ MAINTAINER mezgoodle <mezgoodle@gmail.com>
 # WORKDIR /app
 COPY gitstart.sh /gitstart.sh
 
+ENTRYPOINT ["/bin/echo"]
 # Install some packages
 RUN apk add jq bash git npm yarn
 
@@ -14,5 +15,4 @@ RUN "/gitstart.sh"
 
 # RUN tree -L 1
 RUN echo "Hello world"
-ENTRYPOINT ["/bin/echo"]
 #CMD ["Hello"]
