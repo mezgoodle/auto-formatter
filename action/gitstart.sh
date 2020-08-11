@@ -20,7 +20,7 @@ git status
 echo "## Login into git..."
 echo "---"
 git config --global user.email "mezgoodle@gmail.com"
-git config --global user.name "auto-formatter"
+git config --global user.name "mezgoodle"
 echo "## Staging changes..."
 echo "---"
 git add .
