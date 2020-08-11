@@ -4,6 +4,11 @@ FROM nyukers/sunhose:aformat
 MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
 # WORKDIR /app
+COPY node.sh /node.sh
+COPY gitstart.sh /gitstart.sh
+
+RUN chmod +x /node.sh && chmod +x /gitstart.sh
+RUN "/node.sh" && "/gitstart.sh"
 
 RUN tree -L 1
 RUN echo "Hello world"
