@@ -3,7 +3,7 @@ description: "Greet someone"
 author: "mezgoodle"
 
 inputs: 
-  myInput:
+  GITHUB_TOKEN:
     description: 'Input to use'
     default: 'world'
 
@@ -11,7 +11,7 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.myInput }}
+    - ${{ inputs.GITHUB_TOKEN }}
 
 branding:
   icon: "mic"
