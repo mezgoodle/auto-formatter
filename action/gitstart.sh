@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-
+echo $GITHUB_EVENT_PATH
 REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
 
 echo "## Initializing git repo..."

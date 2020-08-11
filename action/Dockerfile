@@ -4,7 +4,6 @@ FROM alpine:latest
 MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
 # WORKDIR /app
-COPY node.sh /node.sh
 COPY gitstart.sh /gitstart.sh
 
 # Install some packages
