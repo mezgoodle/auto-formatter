@@ -4,11 +4,10 @@ FROM nyukers/sunhose:aformat
 MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
 # WORKDIR /app
+COPY gitstart.sh /gitstart.sh
+
+RUN chmod +x /gitstart.sh
+RUN "/gitstart.sh"
 
 RUN tree -L 1
-RUN echo "Hello world"
 ENTRYPOINT ["/bin/echo"]
-
-CMD ["git --version"]
-CMD ["npm version"]
-CMD ["pip list"]
