@@ -10,3 +10,4 @@ jobs:
       - uses: ./action
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SOME_VAR: "dadasd"
