@@ -4,6 +4,9 @@ set -e
 # echo $FIRST_NAME
 # REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
 
+echo "### Login into git..."
+git config --global user.email "mezgoodle@gmail.com"
+git config --global user.name "auto-formatter"
 echo "## Initializing git repo..."
 git clone https://github.com/mezgoodle/SQL.git
 echo "### Adding git remote..."
@@ -16,8 +19,5 @@ echo "### git commit ..."
 git commit -m "test commit"
 echo "### git status"
 git status
-echo "### Login into git..."
-git config --global user.email "mezgoodle@gmail.com"
-git config --global user.name "auto-formatter"
 echo "### Push commit"
 git push master format
