@@ -34,7 +34,7 @@ echo "---"
 git branch
 echo "Push to master"
 echo "---"
-sh -c "echo Hello world my name is $TOKEN"
+sh -c "echo Hello world my name is $GITHUB_TOKEN"
 git remote add format https://x-access-token:$GITHUB_TOKEN@github.com/mezgoodle/SQL.git
 git push -u format master
 echo "End of gitstart.sh"
