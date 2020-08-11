@@ -5,8 +5,6 @@ author: "mezgoodle"
 runs:
   using: "docker"
   image: "Dockerfile"
-  args:
-    - ${{ inputs.TOKEN }}
 
 branding:
   icon: "mic"
