@@ -9,4 +9,4 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ./action
       with:
-        GITHUB_TOKEN: 'Mona the Octocat'
+          GITHUB_TOKEN: 'Mona the Octocat'
