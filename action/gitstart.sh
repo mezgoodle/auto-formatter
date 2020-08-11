@@ -17,7 +17,7 @@ git commit -m "test commit"
 echo "### git status"
 git status
 echo "### Login into git..."
-git config --global user.email "formatter@1337z.ninja"
-git config --global user.name "Node Code Formatter"
+git config --global user.email "mezgoodle@gmail.com"
+git config --global user.name "auto-formatter"
 echo "### Push commit"
 git push master format
