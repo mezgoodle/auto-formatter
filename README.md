@@ -6,3 +6,4 @@
 
 - [Python Docker](https://hub.docker.com/_/python)
 - [Nyukers Docker](https://hub.docker.com/r/nyukers/sunhose)
+- [Environment variables](https://docs.github.com/en/actions/configuring-and-managing-workflows/using-environment-variables)

@@ -8,5 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: ./action
-        env:
-          GITHUB_TOKEN: "TOKEN"
+      with:
+        GITHUB_TOKEN: 'Mona the Octocat'
