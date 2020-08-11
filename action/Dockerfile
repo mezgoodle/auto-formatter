@@ -10,4 +10,4 @@ RUN chmod +x /gitstart.sh
 
 RUN tree -L 1
 ENTRYPOINT ["/bin/echo"]
-RUN ["git --version"]
+CMD ["git --version"]
