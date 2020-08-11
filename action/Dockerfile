@@ -8,4 +8,7 @@ MAINTAINER mezgoodle <mezgoodle@gmail.com>
 RUN tree -L 1
 RUN echo "Hello world"
 ENTRYPOINT ["/bin/echo"]
-#CMD ["Hello"]
+
+CMD ["git --version"]
+CMD ["npm version"]
+CMD ["pip list"]
