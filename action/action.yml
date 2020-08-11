@@ -12,7 +12,7 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-      - ${{ inputs.myInput }}
+    - ${{ inputs.myInput }}
 
 
 branding:
