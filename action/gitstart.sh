@@ -9,6 +9,7 @@ git config --global user.email "mezgoodle@gmail.com"
 git config --global user.name "auto-formatter"
 echo "## Initializing git repo..."
 git clone https://github.com/mezgoodle/SQL.git
+cd SQL
 echo "### Adding git remote..."
 git remote add format https://x-access-token:$GITHUB_TOKEN@github.com/mezgoodle/SQL.git
 echo "### Make commit"
