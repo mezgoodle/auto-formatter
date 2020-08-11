@@ -6,7 +6,7 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.myInput }}
+    - ${{ inputs.GITHUB_TOKEN }}
 
 branding:
   icon: "mic"
