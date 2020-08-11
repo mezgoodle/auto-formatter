@@ -5,9 +5,9 @@ MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
 # WORKDIR /app
 COPY gitstart.sh /gitstart.sh
-
 RUN chmod +x /gitstart.sh
-RUN "/gitstart.sh"
+#RUN "/gitstart.sh"
 
 RUN tree -L 1
 ENTRYPOINT ["/bin/echo"]
+RUN ["git --version"]
