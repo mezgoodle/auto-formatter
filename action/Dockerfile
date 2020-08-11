@@ -6,8 +6,9 @@ MAINTAINER mezgoodle <mezgoodle@gmail.com>
 RUN apk add jq bash git npm yarn
 # WORKDIR /app
 COPY gitstart.sh /gitstart.sh
-RUN chmod +x /gitstart.sh
-ENTRYPOINT ["/gitstart.sh"]
+COPY test.sh /test.sh
+RUN chmod +x /gitstart.sh && chmod +x /test.sh
+ENTRYPOINT ["/gitstart.sh" && "/test.sh"]
 # Install some packages
 
 

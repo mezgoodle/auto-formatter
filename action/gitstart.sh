@@ -12,7 +12,7 @@ cd SQL
 echo "### Adding git remote..."
 git remote add format https://x-access-token:$GITHUB_TOKEN@github.com/mezgoodle/SQL.git
 echo "### Make commit"
-echo "hello" > test.txt
+echo "world" > test.txt
 echo "### git add ..."
 git add .
 echo "### git commit ..."
