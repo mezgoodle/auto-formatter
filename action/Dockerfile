@@ -3,16 +3,17 @@ FROM alpine:latest
 # FROM nyukers/sunhose:aformat
 MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
+RUN apk add jq bash git npm yarn
 # WORKDIR /app
 COPY gitstart.sh /gitstart.sh
-
-ENTRYPOINT ["/bin/echo"]
-# Install some packages
-RUN apk add jq bash git npm yarn
-
 RUN chmod +x /gitstart.sh
+ENTRYPOINT ["/gitstart.sh"]
+# Install some packages
+
+
+
 # RUN "/gitstart.sh"
 
 # RUN tree -L 1
 RUN echo "Hello world"
-CMD ["/gitstart.sh"]
+# CMD ["/gitstart.sh"]
