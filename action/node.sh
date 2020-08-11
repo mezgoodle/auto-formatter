@@ -10,5 +10,5 @@ npm list
 echo "Install package"
 npm i --save-dev
 echo "Init config"
-npx eslint --init
+# npx eslint --init
 echo "End of node.sh"
