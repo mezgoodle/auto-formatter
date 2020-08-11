@@ -6,7 +6,7 @@ set -e
 echo $GITHUB_TOKEN
 echo "### Login into git..."
 git config --global user.email "mezgoodle@gmail.com"
-git config --global user.name "auto-formatter"
+git config --global user.name "mezgoodle"
 echo "## Initializing git repo..."
 git clone https://github.com/mezgoodle/SQL.git
 cd SQL
