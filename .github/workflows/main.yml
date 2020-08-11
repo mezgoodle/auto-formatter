@@ -9,5 +9,4 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ./action
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SOME_VAR: "dadasd"
+          GITHUB_TOKEN: "dadasd"
