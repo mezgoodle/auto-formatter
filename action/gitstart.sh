@@ -3,7 +3,7 @@
 set -e
 # echo $FIRST_NAME
 # REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
-
+echo $GITHUB_TOKEN
 echo "### Login into git..."
 git config --global user.email "mezgoodle@gmail.com"
 git config --global user.name "auto-formatter"
