@@ -9,4 +9,5 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ./action
         env:
+          FIRST_NAME: Mona
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
