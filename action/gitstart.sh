@@ -21,4 +21,4 @@ git commit -m "test commit"
 echo "### git status"
 git status
 echo "### Push commit"
-git push master format
+git push format master 
