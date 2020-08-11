@@ -6,7 +6,7 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.SOME_VAR }}
+    - ${{ inputs.TOKEN }}
 
 branding:
   icon: "mic"
