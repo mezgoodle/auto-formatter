@@ -19,7 +19,7 @@ autopep8 --in-place -a -a -r .
 echo "### git add ..."
 git add .
 echo "### git commit ..."
-git commit -m "test autopep8"
+git commit -m "test autopep8" || true
 echo "### git status"
 git status
 echo "### Push commit"
