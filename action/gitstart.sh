@@ -14,7 +14,7 @@ git remote add format https://x-access-token:$GITHUB_TOKEN@github.com/mezgoodle/
 echo "### Install autopep8"
 pip install autopep8
 echo "### Execute autopep8"
-autopep8 --in-place --recursive --aggressive --agressive .
+autopep8 --in-place --recursive .
 echo "### git add ..."
 git add .
 echo "### git commit ..."
