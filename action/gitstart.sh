@@ -15,7 +15,7 @@ echo "### Install autopep8"
 pip install autopep8
 echo "### Execute autopep8"
 cat test.py
-autopep8 --in-place --aggressive --aggressive -r .
+autopep8 --in-place -a -a -r .
 echo "### git add ..."
 git add .
 echo "### git commit ..."
