@@ -1,39 +1,26 @@
 #!/bin/bash
 
 set -e
-
-echo "Start gitstart.sh"
-echo "---"
-echo "Execute git clone"
-echo "---"
+# echo $FIRST_NAME
+# REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
+echo "### Login into git..."
+git config --global user.email "mezgoodle@gmail.com"
+git config --global user.name "mezgoodle"
+echo "## Initializing git repo..."
 git clone https://github.com/mezgoodle/SQL.git
 cd SQL
-echo "Execute cat index.sql"
-echo "---"
-cat index.sql
-echo "Create new file"
-echo "---"
-echo "hello" > test.txt
-echo "Execute git status"
-echo "---"
-git status
-echo "## Login into git..."
-echo "---"
-git config --global user.email "mezgoodle@gmail.com"
-git config --global user.name "auto-formatter"
-echo "## Staging changes..."
-echo "---"
-git add .
-echo "## Commiting files..."
-echo "---"
-git commit -m "Formatted code" || true
-echo "## Pushing to master"
-echo "---"
-echo "## Execute git branch"
-echo "---"
-git branch
-echo "Push to master"
-echo "---"
+echo "### Adding git remote..."
 git remote add format https://x-access-token:$GITHUB_TOKEN@github.com/mezgoodle/SQL.git
-git push -u format master
-echo "End of gitstart.sh"
+echo "### Install autopep8"
+pip install autopep8
+echo "### Execute autopep8"
+cat test.py
+autopep8 --in-place -a -a -r .
+echo "### git add ..."
+git add .
+echo "### git commit ..."
+git commit -m "test autopep8"
+echo "### git status"
+git status
+echo "### Push commit"
+git push format master 
