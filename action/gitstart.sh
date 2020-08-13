@@ -24,3 +24,4 @@ echo "### git status"
 git status
 echo "### Push commit"
 git push format master 
+echo "Work is done"
