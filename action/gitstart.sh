@@ -4,10 +4,10 @@ set -e
 # echo $FIRST_NAME
 # REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
 echo "### Login into git..."
-/usr/bin/git config --global user.email "mezgoodle@gmail.com"
-/usr/bin/git config --global user.name "mezgoodle"
+git config --global user.email "mezgoodle@gmail.com"
+git config --global user.name "mezgoodle"
 echo "## Initializing git repo..."
-/usr/bin/git clone https://github.com/mezgoodle/SQL.git
+git clone https://github.com/mezgoodle/SQL.git
 cd SQL
 # echo "### Adding git remote..."
 # git remote add format https://x-access-token:$GITHUB_TOKEN@github.com/mezgoodle/SQL.git

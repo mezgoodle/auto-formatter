@@ -1,9 +1,9 @@
 # FROM nikolaik/python-nodejs:latest
-# FROM alpine:latest
+FROM alpine:latest
 FROM nyukers/sunhose:aformat
-# MAINTAINER mezgoodle <mezgoodle@gmail.com>
+MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
-# RUN apk add jq bash git npm yarn
+RUN apk add jq bash git npm yarn
 # WORKDIR /app
 COPY gitstart.sh /gitstart.sh
 RUN chmod +x /gitstart.sh
