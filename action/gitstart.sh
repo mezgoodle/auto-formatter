@@ -11,9 +11,9 @@ git clone https://github.com/mezgoodle/SQL.git
 cd SQL
 echo "### Adding git remote..."
 git remote add format https://x-access-token:$GITHUB_TOKEN@github.com/mezgoodle/SQL.git
-echo "### Install autopep8"
-npm i clean-html
-echo "### Execute autopep8"
+echo "### Install clean-html"
+npm i -g clean-html
+echo "### Execute clean-html"
 clean-html test.html
 echo "### git add ..."
 git add .
