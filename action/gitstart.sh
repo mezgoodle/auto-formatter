@@ -12,9 +12,9 @@ cd SQL
 echo "### Adding git remote..."
 git remote add format https://x-access-token:$GITHUB_TOKEN@github.com/mezgoodle/SQL.git
 echo "### Install autopep8"
-pip install autopep8
+npm i clean-html
 echo "### Execute autopep8"
-autopep8 --in-place -a -a -r .
+clean-html test.html
 echo "### git add ..."
 git add .
 echo "### git commit ..."
