@@ -13,7 +13,7 @@ MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
 RUN tree -L 1
 #RUN /usr/bin/pip3 freeze
-RUN /usr/bin/git version
+RUN sudo /usr/bin/git version
 RUN /usr/bin/npm version
 
 ENTRYPOINT ["/bin/echo"]
