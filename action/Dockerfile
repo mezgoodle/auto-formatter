@@ -15,12 +15,12 @@ WORKDIR /myapp
 COPY . .
 #COPY gitstart.sh /gitstart.sh
 
-RUN /usr/bin/pip freeze
-RUN /usr/bin/git version
-RUN /usr/bin/npm version
+RUN pip freeze
+#RUN /usr/bin/git version
+#RUN /usr/bin/npm version
 
 RUN tree -L 1
 RUN chmod +x gitstart.sh
 RUN "/myapp/gitstart.sh"
 
-ENTRYPOINT ["/bin/echo"]
+ENTRYPOINT ["/myapp/gitstart.sh"]
