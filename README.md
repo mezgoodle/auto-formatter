@@ -5,6 +5,6 @@
 ## Credits
 
 - [Python Docker](https://hub.docker.com/_/python)
-- [Nyukers Docker](https://hub.docker.com/r/nyukers/sunhose)
+- [Nyukers Docker](https://github.com/nyukers/aformat)
 - [Environment variables](https://docs.github.com/en/actions/configuring-and-managing-workflows/using-environment-variables)
 - [run-node-formatter](https://github.com/MarvinJWendt/run-node-formatter)
