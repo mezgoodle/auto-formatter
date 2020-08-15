@@ -19,8 +19,8 @@ RUN pip freeze
 #RUN /usr/bin/git version
 #RUN /usr/bin/npm version
 
-RUN tree -L 1
+#RUN tree -L 1
 RUN chmod +x gitstart.sh
-RUN "/myapp/gitstart.sh"
+#RUN "/myapp/gitstart.sh"
 
 ENTRYPOINT ["/myapp/gitstart.sh"]
