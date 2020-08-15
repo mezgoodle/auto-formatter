@@ -5,13 +5,15 @@
 FROM nyukers/sunhose:aformat
 MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
-WORKDIR /myapp
+#WORKDIR /myapp
+#COPY . .
 #COPY gitstart.sh /gitstart.sh
-COPY . .
 #RUN chmod +x /gitstart.sh
 #RUN "/gitstart.sh"
-RUN tree -L 1
 
-ENTRYPOINT ["/usr/bin/pip freeze"]
+RUN tree -L 1
+RUN pip freeze
+
+ENTRYPOINT ["/bin/echo"]
 #CMD ["pip freeze"]
 #CMD ["/gitstart.sh"]
