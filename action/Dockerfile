@@ -21,6 +21,6 @@ RUN /usr/bin/npm version
 
 RUN tree -L 1
 RUN chmod +x gitstart.sh
-RUN "gitstart.sh"
+RUN "/myapp/gitstart.sh"
 
 ENTRYPOINT ["/bin/echo"]
