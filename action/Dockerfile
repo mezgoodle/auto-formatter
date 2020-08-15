@@ -12,6 +12,6 @@ COPY . .
 #RUN "/gitstart.sh"
 RUN tree -L 1
 
-ENTRYPOINT ["usr/bin/pip freeze"]
+ENTRYPOINT ["/usr/bin/pip freeze"]
 #CMD ["pip freeze"]
 #CMD ["/gitstart.sh"]
