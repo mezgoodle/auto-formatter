@@ -19,7 +19,7 @@ RUN rm -rf /var/cache/apk/*
 
 #RUN tree -L 1
 #RUN which git
-RUN /usr/bin/pip version
+RUN /usr/bin/pip freeze
 RUN /usr/bin/git version
 RUN /usr/bin/npm version
 
