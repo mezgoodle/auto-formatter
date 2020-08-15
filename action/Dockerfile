@@ -8,7 +8,7 @@ MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
 RUN apk --no-cache add --update bash 
 RUN apk add git npm py-pip
-RUN apk tree
+RUN apk add tree
 RUN rm -rf /var/cache/apk/*
 
 #WORKDIR /myapp
