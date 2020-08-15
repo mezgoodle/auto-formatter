@@ -11,8 +11,8 @@ MAINTAINER mezgoodle <mezgoodle@gmail.com>
 #RUN chmod +x /gitstart.sh
 #RUN "/gitstart.sh"
 
-RUN tree -L 1
-RUN which pip
+#RUN tree -L 1
+RUN which tree
 #RUN /usr/bin/pip version
 #RUN /usr/bin/git version
 #RUN /usr/bin/npm version
