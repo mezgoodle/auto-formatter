@@ -8,6 +8,7 @@ MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
 RUN apk --no-cache add --update bash 
 RUN apk add git npm py-pip
+RUN apk tree
 RUN rm -rf /var/cache/apk/*
 
 #WORKDIR /myapp
@@ -17,10 +18,10 @@ RUN rm -rf /var/cache/apk/*
 #RUN "/gitstart.sh"
 
 #RUN tree -L 1
-RUN which git
-#RUN /usr/bin/pip version
+#RUN which git
+RUN /usr/bin/pip version
 RUN /usr/bin/git version
-#RUN /usr/bin/npm version
+RUN /usr/bin/npm version
 
 ENTRYPOINT ["/bin/echo"]
 #CMD ["pip freeze"]
