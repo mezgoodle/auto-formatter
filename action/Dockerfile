@@ -10,8 +10,8 @@ MAINTAINER mezgoodle <mezgoodle@gmail.com>
 COPY . .
 RUN chmod +x /gitstart.sh
 #RUN "/gitstart.sh"
-
 RUN tree -L 1
+
 ENTRYPOINT ["/bin/echo"]
-CMD ["git --version"]
-CMD ["/gitstart.sh"]
+CMD ["pip freeze"]
+#CMD ["/gitstart.sh"]
