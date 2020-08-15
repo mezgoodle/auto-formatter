@@ -12,9 +12,10 @@ MAINTAINER mezgoodle <mezgoodle@gmail.com>
 #RUN "/gitstart.sh"
 
 RUN tree -L 1
-#RUN /usr/bin/pip3 freeze
-RUN su /usr/bin/git version
-RUN /usr/bin/npm version
+RUN which pip
+#RUN /usr/bin/pip version
+#RUN /usr/bin/git version
+#RUN /usr/bin/npm version
 
 ENTRYPOINT ["/bin/echo"]
 #CMD ["pip freeze"]
