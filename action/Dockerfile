@@ -2,7 +2,6 @@
 # Dockefile for build Docker image via Github Actions
 # Kindly written by Nyukers (C)opyright, 2020
 #---------------------------------------------------------------------------
-#FROM nyukers/sunhose:aformat
 FROM alpine:latest
 MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
@@ -13,14 +12,12 @@ RUN rm -rf /var/cache/apk/*
 
 WORKDIR /myapp
 COPY . .
-#COPY gitstart.sh /gitstart.sh
+#RUN tree -L 1
 
 RUN pip freeze
 #RUN /usr/bin/git version
 #RUN /usr/bin/npm version
 
-#RUN tree -L 1
 RUN chmod +x gitstart.sh
 #RUN "/myapp/gitstart.sh"
-
 ENTRYPOINT ["/myapp/gitstart.sh"]
