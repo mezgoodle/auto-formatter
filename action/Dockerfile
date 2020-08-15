@@ -11,18 +11,16 @@ RUN apk add git npm py-pip
 RUN apk add tree
 RUN rm -rf /var/cache/apk/*
 
-#WORKDIR /myapp
-#COPY . .
+WORKDIR /myapp
+COPY . .
 #COPY gitstart.sh /gitstart.sh
-#RUN chmod +x /gitstart.sh
-#RUN "/gitstart.sh"
 
 #RUN tree -L 1
-#RUN which git
 RUN /usr/bin/pip freeze
 RUN /usr/bin/git version
 RUN /usr/bin/npm version
 
+RUN chmod +x /gitstart.sh
+RUN "/gitstart.sh"
+
 ENTRYPOINT ["/bin/echo"]
-#CMD ["pip freeze"]
-#CMD ["/gitstart.sh"]
