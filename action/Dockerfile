@@ -12,7 +12,7 @@ MAINTAINER mezgoodle <mezgoodle@gmail.com>
 #RUN "/gitstart.sh"
 
 RUN tree -L 1
-RUN pip freeze
+RUN /usr/bin/pip freeze
 
 ENTRYPOINT ["/bin/echo"]
 #CMD ["pip freeze"]
