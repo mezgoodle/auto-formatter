@@ -25,4 +25,5 @@ set -e
 # git push format master 
 # echo "Work is done"
 
-ls
+echo "-----"
+pwd
