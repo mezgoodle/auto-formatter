@@ -3,7 +3,7 @@ FROM alpine:latest
 # FROM nyukers/sunhose:aformat
 MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
-RUN apk add jq bash git npm yarn py-pip
+RUN apk add jq bash git npm py-pip nodejs
 # WORKDIR /app
 COPY gitstart.sh /gitstart.sh
 RUN chmod +x /gitstart.sh
