@@ -5,19 +5,19 @@
 FROM alpine:latest
 MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
-RUN apk --no-cache add --update bash 
-RUN apk add git npm py-pip
-RUN apk add tree
-RUN rm -rf /var/cache/apk/*
+RUN apk --no-cache add --update bash &&\
+apk add git npm py-pip &&\
+rm -rf /var/cache/apk/*
+#RUN apk add tree
+#RUN rm -rf /var/cache/apk/*
 
 WORKDIR /myapp
 COPY . .
 #RUN tree -L 1
 
-RUN pip freeze
+#RUN pip freeze
 #RUN /usr/bin/git version
 #RUN /usr/bin/npm version
 
 RUN chmod +x gitstart.sh
-#RUN "/myapp/gitstart.sh"
 ENTRYPOINT ["/myapp/gitstart.sh"]
