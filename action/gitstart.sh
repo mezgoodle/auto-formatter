@@ -14,7 +14,7 @@ git remote add format https://x-access-token:$GITHUB_TOKEN@github.com/mezgoodle/
 echo "### Install clean-html"
 npm i -g clean-html
 echo "### Execute clean-html"
-clean-html *.html --in-place
+clean-html test/test/index.html --in-place
 echo "### git add ..."
 git add .
 echo "### git commit ..."
