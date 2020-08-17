@@ -15,6 +15,7 @@ echo "### Install clean-html"
 npm i -g clean-html
 echo "### Execute clean-html"
 clean-html *.html --in-place
+clean-html *.html --in-place
 echo "### git add ..."
 git add .
 echo "### git commit ..."
