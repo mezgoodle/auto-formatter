@@ -11,7 +11,7 @@ COPY . .
 RUN apk --no-cache add --update bash &&\
     apk add git npm py-pip &&\
     rm -rf /var/cache/apk/* &&\
-    chmod +x /myapp
+    chmod +x /myapp -R
 
 #RUN apk add tree
 #RUN rm -rf /var/cache/apk/*
