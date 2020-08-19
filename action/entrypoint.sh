@@ -7,7 +7,6 @@ CMD=$1
 case "$CMD" in
   "dev" )
     echo "dev"
-    export NODE_ENV=development
     #exec npm run dev
     ;;
 
@@ -15,8 +14,7 @@ case "$CMD" in
     # we can modify files here, using ENV variables passed in 
     # "docker create" command. It can't be done during build process.
     echo "start"
-    export NODE_ENV=production
-    #exec npm start
+    exec /myapp/gitstart.sh
     ;;
 
    * )
