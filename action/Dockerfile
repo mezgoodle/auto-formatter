@@ -3,15 +3,15 @@
 # Kindly written by Nyukers (C)opyright, 2020
 #---------------------------------------------------------------------------
 FROM alpine:latest
-MAINTAINER mezgoodle <mezgoodle@gmail.com>
+LABEL maintainer <mezgoodle@gmail.com>
 
 WORKDIR /myapp
 COPY . .
 
 RUN apk --no-cache add --update bash &&\
-apk add git npm py-pip &&\
-rm -rf /var/cache/apk/* &&\
-chmod +x gitstart.sh
+    apk add git npm py-pip &&\
+    rm -rf /var/cache/apk/* &&\
+    chmod +x gitstart.sh
 
 #RUN apk add tree
 #RUN rm -rf /var/cache/apk/*
@@ -19,6 +19,7 @@ chmod +x gitstart.sh
 #RUN pip freeze
 #RUN /usr/bin/git version
 #RUN /usr/bin/npm version
-
 #RUN chmod +x gitstart.sh
+
 ENTRYPOINT ["/myapp/gitstart.sh"]
+CMD ["echo"]
