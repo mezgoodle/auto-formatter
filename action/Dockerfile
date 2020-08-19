@@ -22,3 +22,4 @@ RUN apk --no-cache add --update bash &&\
 #RUN chmod +x gitstart.sh
 
 ENTRYPOINT ["/myapp/entrypoint.sh"]
+CMD ["start"]
