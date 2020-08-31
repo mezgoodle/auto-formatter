@@ -13,12 +13,4 @@ RUN apk --no-cache add --update bash &&\
     rm -rf /var/cache/apk/* &&\
     chmod +x /myapp -R
 
-#RUN apk add tree
-#RUN rm -rf /var/cache/apk/*
-#RUN tree -L 1
-#RUN pip freeze
-#RUN /usr/bin/git version
-#RUN /usr/bin/npm version
-#RUN chmod +x gitstart.sh
-
 ENTRYPOINT ["/myapp/entrypoint.sh", "start"]
