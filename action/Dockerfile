@@ -21,6 +21,7 @@ RUN apk --no-cache add --update bash &&\
 #RUN /usr/bin/npm version
 #RUN chmod +x gitstart.sh
 
-ENTRYPOINT ["/myapp/gitstart.sh && /myapp/python.sh"]
+ENTRYPOINT ["/myapp/gitstart.sh"]
+CMD ["/myapp/python.sh"]
 #ENTRYPOINT ["/myapp/entrypoint.sh"]
 #CMD ["start"]
