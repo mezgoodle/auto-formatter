@@ -14,8 +14,8 @@ case "$CMD" in
     # we can modify files here, using ENV variables passed in 
     # "docker create" command. It can't be done during build process.
     echo "Start ###"
-    exec /myapp/gitstart.sh
-    exec /myapp/python.sh
+    sh /myapp/gitstart.sh
+    sh /myapp/python.sh
     echo "Finish ###"
     ;;
 
