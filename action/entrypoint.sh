@@ -13,10 +13,11 @@ case "$CMD" in
   "start" )
     # we can modify files here, using ENV variables passed in 
     # "docker create" command. It can't be done during build process.
-    echo "Start ###"
+    echo "### Start ###"
     sh /myapp/gitstart.sh
     sh /myapp/python.sh
-    echo "Finish ###"
+    sh /myapp/node.sh
+    echo "### Finish ###"
     ;;
 
    * )
