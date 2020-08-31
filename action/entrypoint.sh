@@ -6,16 +6,17 @@ CMD=$1
 
 case "$CMD" in
   "dev" )
-    echo "dev"
+    echo "Dev mode"
     #exec npm run dev
     ;;
 
   "start" )
     # we can modify files here, using ENV variables passed in 
     # "docker create" command. It can't be done during build process.
-    echo "start"
+    echo "Start ###"
     exec /myapp/gitstart.sh
     exec /myapp/python.sh
+    echo "Finish ###"
     ;;
 
    * )
