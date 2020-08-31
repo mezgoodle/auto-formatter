@@ -15,6 +15,7 @@ case "$CMD" in
     # "docker create" command. It can't be done during build process.
     echo "start"
     exec /myapp/gitstart.sh
+    exec /myapp/python.sh
     ;;
 
    * )
