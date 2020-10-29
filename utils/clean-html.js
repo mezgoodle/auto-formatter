@@ -4,8 +4,10 @@
 const { join } = require('path');
 const { readdir, readdirSync, read } = require('fs');
 const { get } = require('http');
+
 //joining path of directory 
 const getFiles = dirpath => {
+  const filenames = [1];
   //passsing directoryPath and callback function
   readdir(dirpath, (err, files) => {
     //handling error
@@ -15,16 +17,28 @@ const getFiles = dirpath => {
     //listing all files using forEach
     files.forEach((file) => {
       // Do whatever you want to do with the file
-      console.dir(file); 
+      if (file.split('.').pop() === 'html') {
+        filenames.push('1');
+        console.log('Hello')
+      }
     });
   });
+
+  return filenames
 };
-console.log(getFiles('./'))
+// console.log(getFiles('./'))
 
 const getDirectories = source =>
   readdirSync(source, { withFileTypes: true })
     .filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name)
 
-const dirs = getDirectories('../');
+let dirs = getDirectories('../');
 console.log(dirs);
+for (const dir of dirs) {
+  dirs = getDirectories(`../${dir}`)
+  console.log(dirs);
+  if (getFiles(`../${dir}`).length !== 0) {
+    console.log(getFiles(`../${dir}`)); 
+  }
+}
