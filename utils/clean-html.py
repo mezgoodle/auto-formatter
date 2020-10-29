@@ -21,6 +21,8 @@ def worker(path=None):
 
 
 worker('./')
-print(filenames)
-print(main.read_file('.//utils/index.html'))
-# os.system('cls')
+for filename in filenames:
+    print(filename)
+    print(main.read_file(filename))
+    # os.system(f'clean-html ../{filename[2:]} --in-place')
+    # print(f'clean-html ../{filename[2:]} --in-place')
