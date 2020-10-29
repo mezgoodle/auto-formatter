@@ -2,11 +2,25 @@ from sync_folders import main
 
 import os
 
-for dir in main.list_dir('./'):
-    for dir_ in main.list_dir(dir):
-        print(dir_)
-    files = main.get_files(dir)
+filenames = []
+
+
+def get_files(dirpath=None):
+    # print(dirpath)
+    files = main.get_files(dirpath)
     for file in files:
         if file['name'][-4:] == 'html':
-            print(file['name'])
-    print('')
+            filenames.append(f'{dirpath}/{file["name"]}')
+
+
+def worker(path=None):
+    dirs = main.list_dir(path)
+    for dir in dirs:
+        get_files(f'{path}{dir}')
+        worker(f'{path}{dir}/')
+
+
+worker('./')
+print(filenames)
+print(main.read_file('.//utils/index.html'))
+# os.system('cls')
