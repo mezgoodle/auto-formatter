@@ -9,7 +9,7 @@ set -e
 # git config --global user.name "mezgoodle"
 # echo "## Initializing git repo..."
 git clone https://github.com/mezgoodle/SQL.git
-node utils/clean-html.js
+echo "Nothing here, only testing"
 # cd SQL
 # echo "### Adding git remote..."
 # git remote add format https://x-access-token:$GITHUB_TOKEN@github.com/mezgoodle/SQL.git
