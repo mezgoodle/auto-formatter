@@ -22,6 +22,7 @@ echo "### Execute clean-html"
 # ls
 cd ../
 python3 utils/clean-html.py
+cd SQL
 echo "### git add ..."
 git add .
 echo "### git commit ..."
