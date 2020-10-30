@@ -16,6 +16,8 @@ echo "### Adding git remote..."
 git remote add format https://x-access-token:$GITHUB_TOKEN@github.com/mezgoodle/SQL.git
 echo "### Install clean-html"
 npm i -g clean-html
+echo "### Install sync-folders"
+pip install sync-folders
 echo "### Execute clean-html"
 # ls
 python3 ../utils/clean-html.py
