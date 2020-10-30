@@ -10,8 +10,6 @@ git config --global user.email "mezgoodle@gmail.com"
 git config --global user.name "mezgoodle"
 echo "## Initializing git repo..."
 git clone https://github.com/mezgoodle/$REPO_FULLNAME.git
-# echo "Nothing here, only testing"
-# ls
 cd $REPO_FULLNAME
 echo "### Adding git remote..."
 git remote add format https://x-access-token:$GITHUB_TOKEN@github.com/mezgoodle/$REPO_FULLNAME.git
@@ -20,7 +18,6 @@ npm i -g clean-html
 echo "### Install sync-folders"
 pip install sync-folders
 echo "### Execute clean-html"
-# ls
 cd ../
 python3 utils/clean-html.py
 cd $REPO_FULLNAME
