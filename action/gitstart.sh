@@ -20,6 +20,7 @@ echo "### Install sync-folders"
 pip install sync-folders
 echo "### Execute clean-html"
 # ls
+cd ../
 python3 ../utils/clean-html.py
 echo "### git add ..."
 git add .
