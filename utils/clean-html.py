@@ -23,4 +23,4 @@ def worker(path=None):
 worker('./')
 for filename in filenames:
     print(filename)
-    os.system(f'clean-html ../auto-formatter/{filename[2:]} --in-place')
+    os.system(f'clean-html ../SQL/{filename[2:]} --in-place')
