@@ -21,7 +21,7 @@ pip install sync-folders
 echo "### Execute clean-html"
 # ls
 cd ../
-python3 ../utils/clean-html.py
+python3 utils/clean-html.py
 echo "### git add ..."
 git add .
 echo "### git commit ..."
