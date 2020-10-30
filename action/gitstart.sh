@@ -10,15 +10,15 @@ git config --global user.name "mezgoodle"
 echo "## Initializing git repo..."
 git clone https://github.com/mezgoodle/SQL.git
 # echo "Nothing here, only testing"
-ls
+# ls
 cd SQL
 echo "### Adding git remote..."
 git remote add format https://x-access-token:$GITHUB_TOKEN@github.com/mezgoodle/SQL.git
 echo "### Install clean-html"
 npm i -g clean-html
 echo "### Execute clean-html"
-ls
-# python3 utils/clean-html.py
+# ls
+python3 ../utils/clean-html.py
 echo "### git add ..."
 git add .
 echo "### git commit ..."
