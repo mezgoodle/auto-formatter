@@ -16,7 +16,8 @@ git remote add format https://x-access-token:$GITHUB_TOKEN@github.com/mezgoodle/
 echo "### Install clean-html"
 npm i -g clean-html
 echo "### Execute clean-html"
-python3 utils/clean-html.py
+ls
+# python3 utils/clean-html.py
 echo "### git add ..."
 git add .
 echo "### git commit ..."
