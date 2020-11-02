@@ -2,25 +2,29 @@ from sync_folders import main
 
 import os
 
-filenames = []
+filenames = [] # Global variable
 
 
 def get_files(dirpath=None):
-    # print(dirpath)
+    """Get all files in current directory"""
+    sliceNum = -4
     files = main.get_files(dirpath)
     for file in files:
-        if file['name'][-4:] == 'html':
+        if file['name'][sliceNum:] == 'html':
             filenames.append(f'{dirpath}/{file["name"]}')
 
 
 def worker(path=None):
+    """Main function"""
     dirs = main.list_dir(path)
     for dir in dirs:
         get_files(f'{path}{dir}')
-        worker(f'{path}{dir}/')
+        worker(f'{path}{dir}/') # Recursive call
 
-
+# Start-point of the program
 worker('./')
+
+# Execute clean-html for every HTML file
 for filename in filenames:
-    # print(filename)
-    os.system(f'clean-html {filename[2:]} --in-place')
+    sliceNum = 2
+    os.system(f'clean-html {filename[sliceNum:]} --in-place')
