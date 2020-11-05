@@ -6,8 +6,6 @@ services:
   - docker
 
 install:
-  - cd action
-  - docker build -t blog .
   # - docker run -d -p 127.0.0.1:80:80 --name blog blog
 
 # before_script:
@@ -17,5 +15,7 @@ install:
 #   - pip install feedparser
 
 script:
+  - cd action
+  - docker build -t blog .
   - docker ps
   # - python tests.py
