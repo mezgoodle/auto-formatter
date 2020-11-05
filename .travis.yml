@@ -1,0 +1,21 @@
+language: python
+python:
+  - 3.7
+
+services:
+  - docker
+
+install:
+  - cd action
+  - docker build -t blog .
+  # - docker run -d -p 127.0.0.1:80:80 --name blog blog
+
+# before_script:
+#   - pip install -r requirements.txt
+#   - pip install mock
+#   - pip install requests
+#   - pip install feedparser
+
+script:
+  - docker ps | grep -q blog
+  # - python tests.py
