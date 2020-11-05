@@ -16,6 +16,6 @@ install:
 
 script:
   - cd action
-  - docker build -t blog .
+  - docker build -t action .
   - docker ps
   # - python tests.py
