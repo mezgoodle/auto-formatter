@@ -18,4 +18,5 @@ script:
   - cd action
   - docker build -t action .
   - docker ps
+  - docker container run --name web action
   # - python tests.py
