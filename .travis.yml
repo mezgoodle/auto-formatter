@@ -17,6 +17,6 @@ install:
 script:
   - cd action
   - docker build -t action -f Dockerfile.test .
-  - docker ps
+  - docker ps -a
   - docker container run --name web action
   # - python tests.py
