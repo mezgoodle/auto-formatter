@@ -5,9 +5,9 @@ MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
 RUN apk add jq bash git npm py-pip nodejs python3
 # WORKDIR /app
-COPY gitstart.sh /gitstart.sh
-RUN chmod +x /gitstart.sh
-ENTRYPOINT ["/gitstart.sh"]
+COPY test.sh /test.sh
+RUN chmod +x /test.sh
+ENTRYPOINT ["/test.sh"]
 
 # RUN tree -L 1
 RUN echo "Hello world"
