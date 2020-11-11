@@ -15,6 +15,8 @@ echo "### Install clean-html"
 npm i -g clean-html
 echo "### Install sync-folders"
 pip install sync-folders
+echo "### Cat index.sql"
+cat index.sql
 echo "### git add ..."
 git add .
 echo "### git commit ..."
