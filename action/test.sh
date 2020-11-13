@@ -10,6 +10,8 @@ echo "## Initializing git repo..."
 git clone https://github.com/mezgoodle/$REPO_FULLNAME.git
 cd $REPO_FULLNAME
 echo "### Adding git remote..."
+echo "Echo local env var..."
+echo $HOME
 git remote add format https://x-access-token:$GITHUB_TOKEN@github.com/mezgoodle/$REPO_FULLNAME.git
 echo "### Install clean-html"
 npm i -g clean-html
