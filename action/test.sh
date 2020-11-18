@@ -22,5 +22,5 @@ git commit -m "test on Travis CI" || true
 echo "### git status"
 git status
 echo "### Push commit"
-git push origin master
+git push origin master || true
 echo "Work is done"
