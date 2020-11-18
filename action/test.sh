@@ -8,8 +8,6 @@ git config --global user.name "mezgoodle"
 echo "## Initializing git repo..."
 git clone https://github.com/mezgoodle/SQL.git
 cd SQL
-echo "### Adding git remote..."
-git remote add format https://github.com/mezgoodle/SQL.git
 echo "### Install clean-html"
 npm i -g clean-html
 echo "### Install sync-folders"
@@ -23,5 +21,5 @@ git commit -m "test on Travis CI" || true
 echo "### git status"
 git status
 echo "### Push commit"
-git push format master
+git push origin master
 echo "Work is done"
