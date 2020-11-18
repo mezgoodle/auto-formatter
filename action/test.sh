@@ -5,7 +5,6 @@ set -e
 echo "### Login into git..."
 git config --global user.email "mezgoodle@gmail.com"
 git config --global user.name "mezgoodle"
-git config --global user.password $PASSWORD
 git config --global hub.protocol https
 echo "## Initializing git repo..."
 git clone https://github.com/mezgoodle/SQL.git
