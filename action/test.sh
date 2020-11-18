@@ -1,18 +1,15 @@
 #!/bin/bash
 
 set -e
-REPO_FULLNAME=SQL
 
 echo "### Login into git..."
 git config --global user.email "mezgoodle@gmail.com"
 git config --global user.name "mezgoodle"
 echo "## Initializing git repo..."
-git clone https://github.com/mezgoodle/$REPO_FULLNAME.git
-cd $REPO_FULLNAME
+git clone https://github.com/mezgoodle/SQL.git
+cd SQL
 echo "### Adding git remote..."
-echo "Echo local env var..."
-echo $HOME
-git remote add format https://x-access-token:98a671c11f86298df823dc60aa8237de0061914e@github.com/mezgoodle/$REPO_FULLNAME.git
+git remote add format https://github.com/mezgoodle/SQL.git
 echo "### Install clean-html"
 npm i -g clean-html
 echo "### Install sync-folders"
@@ -26,5 +23,5 @@ git commit -m "test on Travis CI" || true
 echo "### git status"
 git status
 echo "### Push commit"
-git push format master 
+git push format master
 echo "Work is done"
