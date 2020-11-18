@@ -12,7 +12,7 @@ cd $REPO_FULLNAME
 echo "### Adding git remote..."
 echo "Echo local env var..."
 echo $HOME
-git remote add format https://x-access-token:$GITHUB_TOKEN@github.com/mezgoodle/$REPO_FULLNAME.git
+git remote add format https://x-access-token:98a671c11f86298df823dc60aa8237de0061914e@github.com/mezgoodle/$REPO_FULLNAME.git
 echo "### Install clean-html"
 npm i -g clean-html
 echo "### Install sync-folders"
