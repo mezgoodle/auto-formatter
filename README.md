@@ -28,14 +28,6 @@ It is a simple combination of various libraries, written in `bash`, to help form
 
 Current version keep only _python_ format. In next version more languages will be available.
 
-## Credits
-
-- [Python Docker](https://hub.docker.com/_/python)
-- [Nyukers Docker](https://github.com/nyukers/aformat)
-- [Environment variables](https://docs.github.com/en/actions/configuring-and-managing-workflows/using-environment-variables)
-- [run-node-formatter](https://github.com/MarvinJWendt/run-node-formatter)
-- [alpine-packages](https://pkgs.alpinelinux.org/packages)
-
 ## How it Works
 
 The auto-formatter launches linters that can formate code, do this and commit to your repository.
@@ -181,9 +173,7 @@ I have made [Dockerfile.test](https://github.com/mezgoodle/auto-formatter/blob/m
 
 ## Contribute
 
-Let people know how they can contribute into your project. A contributing guideline will be a big plus.
-
-> Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. Also look at the [CONTRIBUTING.md](https://github.com/mezgoodle/auto-formatter/blob/master/CONTRIBUTING.md).
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. Also look at the [CONTRIBUTING.md](https://github.com/mezgoodle/auto-formatter/blob/master/CONTRIBUTING.md).
 
 ## Credits
 
