@@ -1,26 +1,30 @@
 #!/bin/bash
 
 set -e
-# echo $FIRST_NAME
-# REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
-REPO_FULLNAME=SQL
+
+REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
+
+echo "## Initializing git repo..."
+git init
+echo "### Adding git remote..."
+git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
+echo "### Getting branch"
+BRANCH=${GITHUB_REF#*refs/heads/}
+echo "### git fetch $BRANCH ..."
+git fetch origin $BRANCH
+echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
+git checkout $BRANCH
 
 echo "### Login into git..."
 git config --global user.email "mezgoodle@gmail.com"
 git config --global user.name "mezgoodle"
-echo "## Initializing git repo..."
-git clone https://github.com/mezgoodle/$REPO_FULLNAME.git
-cd $REPO_FULLNAME
-echo "### Adding git remote..."
-git remote add format https://x-access-token:$GITHUB_TOKEN@github.com/mezgoodle/$REPO_FULLNAME.git
+
 echo "### Install clean-html"
 npm i -g clean-html
 echo "### Install sync-folders"
 pip install sync-folders
 echo "### Execute clean-html"
-cd ../
 python3 utils/clean-html.py
-cd $REPO_FULLNAME
 echo "### git add ..."
 git add .
 echo "### git commit ..."
