@@ -1,14 +1,17 @@
 #!/bin/bash
 
-echo "Start node.sh"
-echo "---"
-
-echo "Create package.json"
-npm init -y
-echo "First list output"
-npm list
-echo "Install package"
+echo "Install packages"
 npm i --save-dev
-echo "Init config"
-# npx eslint --init
+echo "Install eslint"
+npm install eslint
+echo "Check existinf of config file"
+if [ -f .eslintrc.* ]
+then
+    echo "Execute eslint"
+    eslint **/*.js --fix
+else
+    npx eslint --init
+    echo "Execute eslint"
+    eslint **/*.js --fix
+
 echo "End of node.sh"
