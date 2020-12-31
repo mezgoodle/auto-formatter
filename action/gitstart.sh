@@ -22,7 +22,7 @@ if [ $node == true ]
 then
     echo "Start node.sh"
     sh /myapp/node.sh
-else if [ $node == false ]
+else
 then
     echo "NodeJs is skipping"
 fi
@@ -31,7 +31,7 @@ if [ $python == true ]
 then
     echo "Start python.sh"
     sh /myapp/python.sh
-else if [ $python == false ]
+else
 then
     echo "Python is skipping"
 fi
@@ -40,7 +40,7 @@ if [ $css == true ]
 then
     echo "Start css.sh"
     sh /myapp/css.sh
-else if [ $css == false ]
+else
 then
     echo "CSS is skipping"
 fi
@@ -49,7 +49,7 @@ if [ $md == true ]
 then
     echo "Start md.sh"
     sh /myapp/md.sh
-else if [ $md == false ]
+else
 then
     echo "Markdown is skipping"
 fi
