@@ -165,7 +165,7 @@ Here you can see build status of [continuous integration](https://en.wikipedia.o
 
 I'm using [Codacy](https://www.codacy.com/) to automate my code quality.
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b7ea79f9c11247459ea1db3c0a1d8d17)](https://www.codacy.com/manual/mezgoodle/auto-formatter/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mezgoodle/auto-formatter&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/cc0fa051bd8449d29556516b289560bc)](https://www.codacy.com/gh/mezgoodle/auto-formatter/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mezgoodle/auto-formatter&amp;utm_campaign=Badge_Grade)
 
 ## Tests
 
