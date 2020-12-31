@@ -34,6 +34,14 @@ else if [ $python == false ]
 then
     echo "Python is skipping"
 
+if [ $css == true ]
+then
+    echo "Start css.sh"
+    sh /myapp/css.sh
+else if [ $css == false ]
+then
+    echo "CSS is skipping"
+
 echo "### Install clean-html"
 npm i -g clean-html
 echo "### Install sync-folders"
