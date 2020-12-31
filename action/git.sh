@@ -18,6 +18,9 @@ echo "### Login into git..."
 git config --global user.email "mezgoodle@gmail.com"
 git config --global user.name "mezgoodle"
 
+###############
+# NodeJS part #
+###############
 if [ $node == true ]
 then
     echo "Start node.sh"
@@ -27,6 +30,9 @@ then
     echo "NodeJs is skipping"
 fi
 
+###############
+# Python part #
+###############
 if [ $python == true ]
 then
     echo "Start python.sh"
@@ -36,6 +42,9 @@ then
     echo "Python is skipping"
 fi
 
+############
+# CSS part #
+############
 if [ $css == true ]
 then
     echo "Start css.sh"
@@ -45,6 +54,9 @@ then
     echo "CSS is skipping"
 fi
 
+#################
+# MarkDown part #
+#################
 if [ $md == true ]
 then
     echo "Start md.sh"
@@ -54,6 +66,9 @@ then
     echo "Markdown is skipping"
 fi
 
+#############
+# HTML part #
+#############
 if [ $html == true ]
 then
     echo "Start html.sh"
@@ -63,18 +78,15 @@ then
     echo "HTML is skipping"
 fi
 
-echo "### Install clean-html"
-npm i -g clean-html
-echo "### Install sync-folders"
-pip install sync-folders
-echo "### Execute clean-html"
-python3 utils/clean-html.py
+#################
+# Work with git #
+#################
 echo "### git add ..."
 git add .
 echo "### git commit ..."
-git commit -m "test clean-html" || true
+git commit -m "autoformatter" || true
 echo "### git status"
 git status
 echo "### Push commit"
-git push format master 
+git push origin master 
 echo "Work is done"
