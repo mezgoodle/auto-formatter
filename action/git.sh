@@ -33,7 +33,6 @@ then
     echo "Start node.sh"
     sh /myapp/node.sh
 else
-then
     echo "NodeJs is skipping"
 fi
 
@@ -46,7 +45,6 @@ then
     sh /myapp/python.sh
     cd $REPO_FULLNAME
 else
-then
     echo "Python is skipping"
 fi
 
@@ -58,7 +56,6 @@ then
     echo "Start css.sh"
     sh /myapp/css.sh
 else
-then
     echo "CSS is skipping"
 fi
 
@@ -70,7 +67,6 @@ then
     echo "Start md.sh"
     sh /myapp/md.sh
 else
-then
     echo "Markdown is skipping"
 fi
 
@@ -82,7 +78,6 @@ then
     echo "Start html.sh"
     sh /myapp/html.sh
 else
-then
     echo "HTML is skipping"
 fi
 
