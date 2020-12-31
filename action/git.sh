@@ -28,26 +28,27 @@ git config --global user.name "mezgoodle"
 ###############
 # NodeJS part #
 ###############
-# if [ $node == true ]
-# then
-#     echo "Start node.sh"
-#     echo "Install packages"
-#     npm i --save-dev
-#     echo "Install eslint"
-#     npm install eslint
-#     echo "Check existinf of config file"
-#     if [ -f .eslintrc.* ]
-#     then
-#         echo "Execute eslint"
-#         eslint **/*.js --fix
-#     else
-#         npx eslint --init
-#         echo "Execute eslint"
-#         eslint **/*.js --fix
-#     echo "End of node.sh"
-# else
-#     echo "NodeJs is skipping"
-# fi
+if [ $node == true ]
+then
+    echo "Start node.sh"
+    echo "Install packages"
+    npm i --save-dev
+    echo "Install eslint"
+    npm install eslint
+    echo "Check existinf of config file"
+    if [ -f .eslintrc.* ]
+    then
+        echo "Execute eslint"
+        eslint **/*.js --fix
+    else
+        npx eslint --init
+        echo "Execute eslint"
+        eslint **/*.js --fix
+    echo "End of node.sh"
+    fi
+else
+    echo "NodeJs is skipping"
+fi
 
 ###############
 # Python part #
@@ -108,6 +109,9 @@ then
     npm i -g clean-html
     echo "### Install sync-folders"
     pip install sync-folders
+    echo "Execute ls and pwd"
+    ls
+    pwd
     echo "### Execute clean-html"
     python3 utils/clean-html.py
     echo "End of html.sh"

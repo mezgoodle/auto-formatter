@@ -1,5 +1,5 @@
-name: "autoformatter"
-description: "Greet someone"
+name: "Auto-Formatter"
+description: "It is a simple combination of various libraries, written in bash, to help formate your code automatically."
 author: "mezgoodle"
 
 runs:
