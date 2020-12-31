@@ -28,7 +28,7 @@ git config --global user.name "mezgoodle"
 ###############
 # NodeJS part #
 ###############
-if [ $node == true ] ;
+if [ $node == true ]
 then
     echo "Start node.sh"
     echo "Install packages"
@@ -36,7 +36,7 @@ then
     echo "Install eslint"
     npm install eslint
     echo "Check existinf of config file"
-    if [ -f .eslintrc.* ] ;
+    if [ -f .eslintrc.* ]
     then
         echo "Execute eslint"
         eslint **/*.js --fix
@@ -44,7 +44,6 @@ then
         npx eslint --init
         echo "Execute eslint"
         eslint **/*.js --fix
-
     echo "End of node.sh"
 else
     echo "NodeJs is skipping"
