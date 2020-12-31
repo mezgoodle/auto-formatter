@@ -1,8 +1,14 @@
 #!/bin/bash
 
 set -e
+#######################
+# Get repository name #
+#######################
 REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
 
+#################
+# Work with git #
+#################
 echo "## Initializing git repo..."
 git init
 echo "### Adding git remote..."
