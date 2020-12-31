@@ -25,6 +25,7 @@ then
 else if [ $node == false ]
 then
     echo "NodeJs is skipping"
+fi
 
 if [ $python == true ]
 then
@@ -33,6 +34,7 @@ then
 else if [ $python == false ]
 then
     echo "Python is skipping"
+fi
 
 if [ $css == true ]
 then
@@ -41,6 +43,16 @@ then
 else if [ $css == false ]
 then
     echo "CSS is skipping"
+fi
+
+if [ $md == true ]
+then
+    echo "Start md.sh"
+    sh /myapp/md.sh
+else if [ $md == false ]
+then
+    echo "Markdown is skipping"
+fi
 
 echo "### Install clean-html"
 npm i -g clean-html
