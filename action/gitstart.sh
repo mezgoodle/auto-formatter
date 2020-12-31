@@ -18,8 +18,10 @@ echo "### Login into git..."
 git config --global user.email "mezgoodle@gmail.com"
 git config --global user.name "mezgoodle"
 
-echo "### Install clean-html"
-npm i -g clean-html
+if [ $node == true ]
+then
+    echo "### Install clean-html"
+    npm i -g clean-html
 echo "### Install sync-folders"
 pip install sync-folders
 echo "### Execute clean-html"
