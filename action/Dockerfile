@@ -2,7 +2,7 @@
 # Dockefile for build Docker image via Github Actions
 # Kindly written by Nyukers (C)opyright, 2020
 #---------------------------------------------------------------------------
-FROM alpine:3.12
+FROM alpine:latest
 LABEL maintainer <mezgoodle@gmail.com>
 
 WORKDIR /myapp
