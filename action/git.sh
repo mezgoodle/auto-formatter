@@ -28,7 +28,7 @@ git config --global user.name "mezgoodle"
 ###############
 # NodeJS part #
 ###############
-if [ $node == true ]
+if [ "$node" == true ]
 then
     echo "Start node.sh"
     echo "Install packages"
@@ -53,7 +53,7 @@ fi
 ###############
 # Python part #
 ###############
-if [ $python == true ] ;
+if [ "$python" == true ] ;
 then
     echo "Start python.sh"
     echo "Install autopep8"
@@ -68,7 +68,7 @@ fi
 ############
 # CSS part #
 ############
-if [ $css == true ] ;
+if [ "$css" == true ] ;
 then
     echo "Start css.sh"
     echo "Install stylelint"
@@ -85,7 +85,7 @@ fi
 #################
 # MarkDown part #
 #################
-if [ $md == true ] ;
+if [ "$md" == true ] ;
 then
     echo "Start md.sh"
     echo "Install markdownlinter"
@@ -102,7 +102,7 @@ fi
 #############
 # HTML part #
 #############
-if [ $html == true ] ;
+if [ "$html" == true ] ;
 then
     echo "Start html.sh"
     echo "### Install clean-html"
