@@ -31,7 +31,7 @@ git config --global user.name "mezgoodle"
 if [ $node == true ]
 then
     echo "Start node.sh"
-    sh /myapp/node.sh
+    sh ./node.sh
 else
     echo "NodeJs is skipping"
 fi
@@ -42,7 +42,7 @@ fi
 if [ $python == true ]
 then
     echo "Start python.sh"
-    sh /myapp/python.sh
+    sh ./python.sh
     cd $REPO_FULLNAME
 else
     echo "Python is skipping"
@@ -54,7 +54,7 @@ fi
 if [ $css == true ]
 then
     echo "Start css.sh"
-    sh /myapp/css.sh
+    sh ./css.sh
 else
     echo "CSS is skipping"
 fi
@@ -65,7 +65,7 @@ fi
 if [ $md == true ]
 then
     echo "Start md.sh"
-    sh /myapp/md.sh
+    sh ./md.sh
 else
     echo "Markdown is skipping"
 fi
@@ -76,7 +76,7 @@ fi
 if [ $html == true ]
 then
     echo "Start html.sh"
-    sh /myapp/html.sh
+    sh ./html.sh
 else
     echo "HTML is skipping"
 fi
