@@ -75,7 +75,7 @@ then
     echo "Create config file"
     echo "{\"extends\": \"stylelint-config-standard\"}" > .stylelintrc.json
     echo "Execute stylelint"
-    sh stylelint "**/*.css" --fix
+    stylelint "**/*.css" --fix
     echo "End of css.sh"
 else
     echo "CSS is skipping"
@@ -91,7 +91,7 @@ then
     npm install markdownlint
     npm install -g markdownlint-clin
     echo "Execute markdownlinter"
-    sh markdownlint **/*.md --ignore node_modules --fix
+    markdownlint **/*.md --ignore node_modules --fix
     echo "End of md.sh"
 
 else
