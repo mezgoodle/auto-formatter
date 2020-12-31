@@ -2,7 +2,7 @@ FROM alpine:latest
 MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
 RUN apk add jq bash git npm py-pip nodejs python3
-COPY test.sh /test.sh
+COPY action/test.sh /test.sh
 RUN chmod +x /test.sh
 ENTRYPOINT ["/test.sh"]
 
