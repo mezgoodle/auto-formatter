@@ -5,6 +5,9 @@ set -e
 # Get repository name #
 #######################
 REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
+REPO_SHORTNAME=$(jq -r ".repository.short_name" "$GITHUB_EVENT_PATH")
+echo $REPO_SHORTNAME
+echo $GITHUB_EVENT_PATH
 
 #################
 # Work with git #
