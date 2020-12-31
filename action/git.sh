@@ -7,7 +7,7 @@ set -e
 REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
 IFS='/' # Setting slash as delimiter
 read -a strarr <<< $REPO_FULLNAME # Reading str as an array as tokens separated by IFS  
-REPO_SHORTNAME=$strarr[1]
+REPO_SHORTNAME=${strarr[1]}
 IFS=$'\n'
 
 #################
