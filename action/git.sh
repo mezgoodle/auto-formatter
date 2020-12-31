@@ -110,6 +110,7 @@ then
     echo "### Install sync-folders"
     pip install sync-folders
     echo "Execute ls and pwd"
+    cd ../
     ls
     pwd
     echo "### Execute clean-html"
