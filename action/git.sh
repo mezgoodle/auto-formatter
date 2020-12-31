@@ -28,7 +28,7 @@ git config --global user.name "mezgoodle"
 ###############
 # NodeJS part #
 ###############
-if [ $node == true ]
+if [ $node == true ];
 then
     echo "Start node.sh"
     sh ./node.sh
@@ -39,9 +39,10 @@ fi
 ###############
 # Python part #
 ###############
-if [ $python == true ]
+if [ $python == true ];
 then
     echo "Start python.sh"
+    ls
     sh ./python.sh
     cd $REPO_FULLNAME
 else
@@ -51,7 +52,7 @@ fi
 ############
 # CSS part #
 ############
-if [ $css == true ]
+if [ $css == true ];
 then
     echo "Start css.sh"
     sh ./css.sh
@@ -62,7 +63,7 @@ fi
 #################
 # MarkDown part #
 #################
-if [ $md == true ]
+if [ $md == true ];
 then
     echo "Start md.sh"
     sh ./md.sh
@@ -73,7 +74,7 @@ fi
 #############
 # HTML part #
 #############
-if [ $html == true ]
+if [ $html == true ];
 then
     echo "Start html.sh"
     sh ./html.sh
