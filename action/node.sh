@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "Start node.sh"
-
 echo "Install packages"
 npm i --save-dev
 echo "Install eslint"

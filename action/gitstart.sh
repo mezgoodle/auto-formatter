@@ -20,8 +20,22 @@ git config --global user.name "mezgoodle"
 
 if [ $node == true ]
 then
-    echo "### Install clean-html"
-    npm i -g clean-html
+    echo "Start node.sh"
+    sh /myapp/node.sh
+else if [ $node == false ]
+then
+    echo "NodeJs is skipping"
+
+if [ $python == true ]
+then
+    echo "Start python.sh"
+    sh /myapp/python.sh
+else if [ $python == false ]
+then
+    echo "Python is skipping"
+
+echo "### Install clean-html"
+npm i -g clean-html
 echo "### Install sync-folders"
 pip install sync-folders
 echo "### Execute clean-html"
