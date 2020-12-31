@@ -31,7 +31,21 @@ git config --global user.name "mezgoodle"
 if [ $node == true ] ;
 then
     echo "Start node.sh"
-    sh ./node.sh
+    echo "Install packages"
+    npm i --save-dev
+    echo "Install eslint"
+    npm install eslint
+    echo "Check existinf of config file"
+    if [ -f .eslintrc.* ] ;
+    then
+        echo "Execute eslint"
+        eslint **/*.js --fix
+    else
+        npx eslint --init
+        echo "Execute eslint"
+        eslint **/*.js --fix
+
+    echo "End of node.sh"
 else
     echo "NodeJs is skipping"
 fi
@@ -42,10 +56,11 @@ fi
 if [ $python == true ] ;
 then
     echo "Start python.sh"
-    # cd ../
-    ls
-    sh action/python.sh
-    cd $REPO_FULLNAME
+    echo "Install autopep8"
+    pip install autopep8
+    echo "Execute autopep"
+    autopep8 --in-place -r -a -a .
+    echo "End of python.sh"
 else
     echo "Python is skipping"
 fi
@@ -56,7 +71,13 @@ fi
 if [ $css == true ] ;
 then
     echo "Start css.sh"
-    sh ./css.sh
+    echo "Install stylelint"
+    npm install stylelint stylelint-config-standard
+    echo "Create config file"
+    echo "{\"extends\": \"stylelint-config-standard\"}" > .stylelintrc.json
+    echo "Execute stylelint"
+    stylelint "**/*.css" --fix
+    echo "End of css.sh"
 else
     echo "CSS is skipping"
 fi
@@ -67,7 +88,13 @@ fi
 if [ $md == true ] ;
 then
     echo "Start md.sh"
-    sh ./md.sh
+    echo "Install markdownlinter"
+    npm install markdownlint
+    npm install -g markdownlint-clin
+    echo "Execute markdownlinter"
+    markdownlint **/*.md --ignore node_modules --fix
+    echo "End of md.sh"
+
 else
     echo "Markdown is skipping"
 fi
@@ -78,7 +105,13 @@ fi
 if [ $html == true ] ;
 then
     echo "Start html.sh"
-    sh ./html.sh
+    echo "### Install clean-html"
+    npm i -g clean-html
+    echo "### Install sync-folders"
+    pip install sync-folders
+    echo "### Execute clean-html"
+    python3 utils/clean-html.py
+    echo "End of html.sh"
 else
     echo "HTML is skipping"
 fi
