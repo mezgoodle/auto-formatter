@@ -1,13 +1,13 @@
 #!/bin/bash
 
 set -e
-#######################
-# Get repository name #
-#######################
+########################
+# Get repository names #
+########################
 REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
-REPO_SHORTNAME=$(jq -r ".repository.short_name" "$GITHUB_EVENT_PATH")
-echo $REPO_SHORTNAME
-echo $GITHUB_EVENT_PATH
+IFS='/' # Setting slash as delimiter
+read -a strarr <<< $REPO_FULLNAME # Reading str as an array as tokens separated by IFS  
+REPO_SHORTNAME=$strarr[1]
 
 #################
 # Work with git #
@@ -18,7 +18,7 @@ echo "### Getting branch"
 BRANCH=${GITHUB_REF#*refs/heads/}
 echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
 git checkout $BRANCH
-cd $REPO_FULLNAME
+cd $REPO_SHORTNAME
 
 echo "### Login into git..."
 git config --global user.email "mezgoodle@gmail.com"
