@@ -42,7 +42,7 @@ fi
 if [ $python == true ] ;
 then
     echo "Start python.sh"
-    cd ../
+    # cd ../
     ls
     sh ./python.sh
     cd $REPO_FULLNAME
