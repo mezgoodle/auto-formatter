@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd ../
 echo "Install autopep8"
 pip install autopep8
 echo "Execute autopep"
