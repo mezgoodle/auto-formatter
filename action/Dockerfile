@@ -1,14 +1,10 @@
-# FROM nikolaik/python-nodejs:latest
 FROM alpine:latest
-# FROM nyukers/sunhose:aformat
 MAINTAINER mezgoodle <mezgoodle@gmail.com>
 
 RUN apk add jq bash git npm py-pip nodejs python3
 # WORKDIR /app
-COPY gitstart.sh /gitstart.sh
-RUN chmod +x /gitstart.sh
-ENTRYPOINT ["/gitstart.sh"]
+COPY git.sh /git.sh
+RUN chmod +x /git.sh
+ENTRYPOINT ["/git.sh"]
 
-# RUN tree -L 1
 RUN echo "Hello world"
-# CMD ["/gitstart.sh"]

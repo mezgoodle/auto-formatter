@@ -54,6 +54,15 @@ then
     echo "Markdown is skipping"
 fi
 
+if [ $html == true ]
+then
+    echo "Start html.sh"
+    sh /myapp/html.sh
+else
+then
+    echo "HTML is skipping"
+fi
+
 echo "### Install clean-html"
 npm i -g clean-html
 echo "### Install sync-folders"
