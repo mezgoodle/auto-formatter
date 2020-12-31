@@ -44,7 +44,7 @@ then
     echo "Start python.sh"
     # cd ../
     ls
-    sh ./python.sh
+    sh action/python.sh
     cd $REPO_FULLNAME
 else
     echo "Python is skipping"

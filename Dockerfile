@@ -8,4 +8,4 @@ COPY action/python.sh /python.sh
 RUN chmod +x /git.sh
 ENTRYPOINT ["/git.sh"]
 
-RUN echo "Hello world"
+RUN echo "Start of the work"
