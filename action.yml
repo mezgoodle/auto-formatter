@@ -7,5 +7,5 @@ runs:
   image: "Dockerfile"
 
 branding:
-  icon: "heck-square"
+  icon: "check-square"
   color: "yellow"
