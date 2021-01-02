@@ -126,7 +126,7 @@ fi
 echo "### git add ..."
 git add .
 echo "### git commit ..."
-git commit -m "autoformatter" || true
+git commit -m "Auto-formatter" || true
 echo "### git status"
 git status
 echo "### Push commit"
