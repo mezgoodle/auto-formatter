@@ -1,3 +1,9 @@
+# 1.0.1 (02.01.21)
+
+We updated:
+- commit text
+- brand icon
+
 # 1.0 (31.12.20)
 
 - Support python formatting.
