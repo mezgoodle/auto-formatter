@@ -20,7 +20,7 @@ It is a simple combination of various libraries, written in `bash`, to help form
 - [Code style](#code-style)
 - [Tests](#tests)
 - [Contribute](#contribute)
-- [Credits](#credits-1)
+- [Credits](#credits)
 - [License](#license)
 
 
@@ -110,7 +110,7 @@ jobs:
           fetch-depth: 0
 
       ################################
-      # Run Linter against code base #
+      # Run Auto-formatter against code base #
       ################################
       - name: Auto-Formatter
         uses: mezgoodle/auto-formatter@v1.0
