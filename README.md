@@ -113,7 +113,7 @@ jobs:
       # Run Auto-formatter against code base #
       ################################
       - name: Auto-Formatter
-        uses: mezgoodle/auto-formatter@v1.0
+        uses: mezgoodle/auto-formatter@v1.0.1
         env:
             GITHUB_TOKEN: ${{ secrets.TOKEN }}
 ```
