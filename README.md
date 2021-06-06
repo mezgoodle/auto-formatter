@@ -5,25 +5,6 @@
 This repository is for the **GitHub Action** to run a **auto-formatter**.
 It is a simple combination of various libraries, written in `bash`, to help formate your code automatically.
 
-## Table of contents
-
-- [Version](#version)
-- [Credits](#credits)
-- [How it Works](#how-it-works)
-- [Supported Linters](#supported-linters)
-- [How to use](#how-to-use)
-- [Example connecting GitHub Action Workflow](#example-connecting-github-action-workflow)
-- [Add Super-Linter badge in your repository README](#add-super-linter-badge-in-your-repository-readme)
-- [Environment variables](#environment-variables)
-- [Motivation](#motivation)
-- [Build status](#build-status)
-- [Code style](#code-style)
-- [Tests](#tests)
-- [Contribute](#contribute)
-- [Credits](#credits)
-- [License](#license)
-
-
 ## Version
 
 Current version keep only _python_ format. In next version more languages will be available.
@@ -113,7 +94,7 @@ jobs:
       # Run Auto-formatter against code base #
       ################################
       - name: Auto-Formatter
-        uses: mezgoodle/auto-formatter@v1.0.1
+        uses: mezgoodle/auto-formatter@v1.0.2
         env:
             GITHUB_TOKEN: ${{ secrets.TOKEN }}
 ```
@@ -158,18 +139,9 @@ At first I was inspired by this [project](https://github.com/github/super-linter
 
 Here you can see build status of [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration):
 
-[![Build Status](https://travis-ci.com/mezgoodle/auto-formatter.svg?branch=master)](https://travis-ci.com/mezgoodle/auto-formatter)
+[![Docker Image CI](https://github.com/mezgoodle/auto-formatter/actions/workflows/docker-image.yml/badge.svg)](https://github.com/mezgoodle/auto-formatter/actions/workflows/docker-image.yml)
+[![Docker Image CI](https://gitlab.com/mezgoodle/auto-formatter/badges/master/pipeline.svg)](https://gitlab.com/mezgoodle/auto-formatter/-/pipelines)
 ![Lint Code Base](https://github.com/mezgoodle/auto-formatter/workflows/Lint%20Code%20Base/badge.svg)
-
-## Code style
-
-I'm using [Codacy](https://www.codacy.com/) to automate my code quality.
-
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/cc0fa051bd8449d29556516b289560bc)](https://www.codacy.com/gh/mezgoodle/auto-formatter/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mezgoodle/auto-formatter&amp;utm_campaign=Badge_Grade)
-
-## Tests
-
-I have made [Dockerfile.test](https://github.com/mezgoodle/auto-formatter/blob/master/Dockerfile.test) and [test.sh](https://github.com/mezgoodle/auto-formatter/blob/master/action/test.sh) quite similiar to main shell script. Then make testing with [TravisCI](https://travis-ci.org/).
 
 ## Contribute
 

@@ -1,9 +1,0 @@
-FROM alpine:latest
-MAINTAINER mezgoodle <mezgoodle@gmail.com>
-
-RUN apk add jq bash git npm py-pip nodejs python3
-COPY action/test.sh /test.sh
-RUN chmod +x /test.sh
-ENTRYPOINT ["/test.sh"]
-
-RUN echo "Start the testing with Travis CI"
