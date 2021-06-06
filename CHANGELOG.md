@@ -1,3 +1,8 @@
+# 1.0.2 (06.06.21)
+
+We updated:
+- Continuous Integration
+
 # 1.0.1 (02.01.21)
 
 We updated:
