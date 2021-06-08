@@ -15,7 +15,7 @@ IFS=$"\n"
 #################
 echo "### Clone git remote..."
 echo "git clone https://$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git"
-git clone https://$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
+git clone https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
 echo "### Getting branch"
 BRANCH=${GITHUB_REF#*refs/heads/}
 echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
