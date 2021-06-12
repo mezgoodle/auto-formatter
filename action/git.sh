@@ -2,7 +2,7 @@
 
 set -e
 ########################
-# Get repository names #
+# Get repository name  #
 ########################
 REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
 IFS="/" # Setting slash as delimiter
