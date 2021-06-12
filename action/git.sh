@@ -15,6 +15,7 @@ REPO_FULLNAME="auto-formatter"
 # Work with git #
 #################
 echo "### Clone git remote..."
+echo $REPO_FULLNAME
 echo "git clone https://$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git"
 git clone https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
 echo "### Getting branch"
