@@ -10,7 +10,7 @@ read -a strarr <<< $REPO_FULLNAME # Reading str as an array as tokens separated 
 REPO_SHORTNAME=${strarr[1]}
 IFS=$"\n"
 
-REPO_FULLNAME="auto-formatter"
+REPO_FULLNAME="mezgoodle/auto-formatter"
 #################
 # Work with git #
 #################
