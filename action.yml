@@ -1,11 +1,11 @@
-name: 'Auto-formatter'
-description: 'Action that formats code'
-author: 'mezgoodle'
-inputs:
-  TOKEN:
-    description: 'GitHub Token'
-    required: true
-    default: 'None'
+name: "Auto-Formatter"
+description: "It is a simple combination of various libraries, written in bash, to help formate your code automatically."
+author: "mezgoodle"
+
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "check-square"
+  color: "yellow"
