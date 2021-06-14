@@ -1,0 +1,11 @@
+name: 'Auto-formatter'
+description: 'Action that formats code'
+author: 'mezgoodle'
+inputs:
+  TOKEN:
+    description: 'GitHub Token'
+    required: true
+    default: 'None'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
