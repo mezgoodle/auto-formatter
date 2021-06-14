@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/mezgoodle/auto-formatter/issues"
   },
-  "homepage": "https://github.com/mezgoodle/auto-formatter#readme"
+  "homepage": "https://github.com/mezgoodle/auto-formatter#readme",
+  "dependencies": {
+    "@actions/core": "^1.4.0",
+    "@actions/github": "^5.0.0"
+  }
 }
