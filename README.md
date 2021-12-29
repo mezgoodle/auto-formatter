@@ -9,6 +9,8 @@ It is a simple combination of various libraries, written in `bash`, to help form
 
 Current version keep only _python_ format. In next version more languages will be available.
 
+> Project is no longer being developed for various reasons.
+
 ## How it Works
 
 The auto-formatter launches linters that can formate code, do this and commit to your repository.
